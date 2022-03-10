@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@1,700&display=swap');
+
+:root{
+    --font-normal: Arial, Helvetica, sans-serif;
+    --font-titulo: 'Be Vietnam Pro', sans-serif;
+    --font-escrita: 'Kalam', cursive;
+}
+
 *{
     margin: 0%;
     padding: 0%;
@@ -19,6 +29,12 @@ header{
 
 header h1{
     font-variant: small-caps;
+    font-family: var(--font-titulo);
+    font-size: 8vh;
+}
+
+header > p{
+    font-family: var(--font-normal);
 }
 
 a{
@@ -36,20 +52,40 @@ section{
     padding-bottom: 10vh;
     padding-left: 30px;
     line-height: 2em;
+    font-size: 4vh;
+    font-family: var(--font-escrita);
+    font-weight: bold;
 }
 
 section.normal{
     background-color: white;
 }
 
+section.normal > p{
+    padding-bottom: 2em;
+}
+
 section.imagem{
     background-color: rgb(85, 85, 85);
     color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.795);
 }
 
 section.imagem > p{
-    background-color: rgba(65, 61, 61, 0.733);
-    width: 400px;
+    background-color: rgba(65, 61, 61, 0.548);
+    padding: 8px;
+    display: inline-block;
+    text-shadow: 2px 2px black;
+}
+
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg');
 }
 
 footer{
@@ -57,4 +93,5 @@ footer{
     padding: 10px;
     color: white;
     text-align: center;
+    font-family: var(--font-normal);
 }
