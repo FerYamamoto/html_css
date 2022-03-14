@@ -29,8 +29,9 @@
         <input type="password"
             minlength="4"
             maxlength="8"
-            size="10"
-            title="min 4, max 8"
+            size="15"
+            title=""
+            placeholder="Digite sua senha"
         >
         <button type="submit">Enviar</button>
     </form>
@@ -54,7 +55,47 @@
     </p>
 
     <p></p>
-    <input type="text">
+
+    <datalist id="urlsdata">
+        <option>https://www.example.com.br</option>
+        <option>http://www.example.com.br</option>
+    </datalist>
+
+    <form action="">
+        <input type="url"
+            placeholder="https://www.example.com.br"
+            pattern=".*\.com\.br.*"
+            title="Somente url validas"
+            required
+            list="urlsdata"
+        >
+        <button type="submit">Enviar</button>
+    </form>
+
+    <br>
+
+    <fieldset>
+        <legend>Choose your interest</legend>
+        <div>
+            <input type="checkbox" id="coding" name="interest" value="coding">
+            <label for="coding">Coding</label>
+        </div>
+        <div>
+            <input type="checkbox" name="interest" id="music" value="music">
+            <label for="interest">Music</label>
+        </div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Vamos tomar um café?</legend>
+        <input type="radio" name="coffe" id="yep" value="yes">
+        <label for="yep">Sim</label>
+
+        <input type="radio" name="coffe" id="nono" value="no">
+        <label for="nono">Não</label>
+    </fieldset>
 
     <br>
     <p></p>
